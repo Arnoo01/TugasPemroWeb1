@@ -157,3 +157,64 @@ footer {
         gap: 1.5rem;
     }
 }
+
+/* Custom Floating Audio Player */
+.audio-player {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(168, 47, 47, 0.5); /* Merah Assassin */
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+}
+
+.audio-player:hover {
+    border-color: #a82f2f;
+    box-shadow: 0 4px 20px rgba(168, 47, 47, 0.6);
+    transform: translateY(-3px);
+}
+
+.track-title {
+    color: #eaeaea;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.play-btn {
+    background: #a82f2f;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+.play-btn:hover {
+    background: #c23b3b;
+    transform: scale(1.05);
+}
+
+/* Responsivitas untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .audio-player {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 15px;
+    }
+    .track-title {
+        font-size: 0.8rem;
+    }
+}

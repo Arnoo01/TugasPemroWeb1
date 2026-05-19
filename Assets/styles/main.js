@@ -91,3 +91,17 @@ window.addEventListener('resize', () => {
 
 init();
 animate();
+
+// --- Custom Audio Player Control ---
+const audio = document.getElementById('bg-music');
+const playPauseBtn = document.getElementById('play-pause-btn');
+
+playPauseBtn.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playPauseBtn.innerHTML = '⏸ Pause';
+    } else {
+        audio.pause();
+        playPauseBtn.innerHTML = '▶ Play';
+    }
+});
